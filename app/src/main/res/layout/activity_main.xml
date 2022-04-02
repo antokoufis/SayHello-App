@@ -31,8 +31,7 @@
         android:id="@+id/buttonShowName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="32dp"
         android:text="@string/sayHi"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
