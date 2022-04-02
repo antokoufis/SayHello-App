@@ -3,12 +3,24 @@ package com.example.sayhelloapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    EditText objEditTextName;
+    TextView objTextViewName;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        objEditTextName =  findViewById(R.id.editTextName);
+        objTextViewName = findViewById(R.id.textViewName);
+        
+    }
+
+    public void sayHello(View view) {
+        objTextViewName.setText("Hello Dear " + objEditTextName.getText().toString());
     }
 }
