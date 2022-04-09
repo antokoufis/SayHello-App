@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:onClick="sayHelloNewScreen"
         android:text="@string/say_hello_in_new_screen"
         app:layout_constraintStart_toEndOf="@+id/buttonShowName"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
