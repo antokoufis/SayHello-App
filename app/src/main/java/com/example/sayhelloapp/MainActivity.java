@@ -24,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
+
+        //Save data to the Bundle (other methods include putInt(), putBoolean() etc)
+        CharSequence userText = objEditTextName.getText();
+        outState.putCharSequence("savedUserText", userText);
+        CharSequence displayText = objTextViewName.getText();
+        outState.putCharSequence("savedDisplayText", displayText);
     }
 
     public void sayHello(View view) {
