@@ -1,5 +1,6 @@
 package com.example.sayhelloapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -18,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
         objEditTextName =  findViewById(R.id.editTextName);
         objTextViewName = findViewById(R.id.textViewName);
         
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 
     public void sayHello(View view) {
