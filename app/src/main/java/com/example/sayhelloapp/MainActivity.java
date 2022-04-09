@@ -49,4 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public void sayHello(View view) {
         objTextViewName.setText("Hello Dear " + objEditTextName.getText().toString());
     }
+
+    public void sayHelloNewScreen(View view) {
+    }
 }

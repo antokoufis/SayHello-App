@@ -20,12 +20,13 @@
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
+        android:onClick="sayHelloNewScreen"
         android:text="@string/name"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonShowName"
@@ -43,4 +44,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="32dp" />
+
+    <Button
+        android:id="@+id/buttonShowHelloNewScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/say_hello_in_new_screen"
+        app:layout_constraintStart_toEndOf="@+id/buttonShowName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
