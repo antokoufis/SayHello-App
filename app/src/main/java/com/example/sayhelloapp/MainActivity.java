@@ -18,7 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         objEditTextName =  findViewById(R.id.editTextName);
         objTextViewName = findViewById(R.id.textViewName);
-        
+
+        if (savedInstanceState != null){
+//Retrieve data from the Bundle (other methods include getInt(), getBoolean() etc)
+            CharSequence userText = savedInstanceState.getCharSequence("savedUserText");
+            CharSequence displayText = savedInstanceState.getCharSequence("savedDisplayText");
+//Restore the dynamic state of the UI
+            objEditTextName.setText(userText);
+            objTextViewName.setText(displayText);
+        }
+        else{
+//Initialize the UI
+            objEditTextName.setText("");
+            objEditTextName.setHint("Name");
+            objTextViewName.setText("TextView");
+        }
     }
 
     @Override
@@ -26,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
         //Save data to the Bundle (other methods include putInt(), putBoolean() etc)
-        CharSequence userText = objEditTextName.getText();
+        userText = objEditTextName.getText();
         outState.putCharSequence("savedUserText", userText);
         CharSequence displayText = objTextViewName.getText();
         outState.putCharSequence("savedDisplayText", displayText);
