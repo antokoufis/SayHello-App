@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
         //Save data to the Bundle (other methods include putInt(), putBoolean() etc)
-        userText = objEditTextName.getText();
+        CharSequence userText = objEditTextName.getText();
         outState.putCharSequence("savedUserText", userText);
         CharSequence displayText = objTextViewName.getText();
         outState.putCharSequence("savedDisplayText", displayText);
